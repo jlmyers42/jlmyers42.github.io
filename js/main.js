@@ -63,7 +63,8 @@ jQuery(document).ready(function($) {
             }
         });
         // add stamen watercolor layer
-        map.mapTypes.set(layer, new google.maps.StamenMapType(layer));
+        // temporarily remove stamen layer
+          // map.mapTypes.set(layer, new google.maps.StamenMapType(layer));
         // add my labels with InfoBox
         for (var i = 0; i < myPlaces.length; i++) {
             var theOptions = {
