@@ -1,1 +1,167 @@
-Hello World
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>ArcSuviam - A playground for maps, design, and web code</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!-- the map js files -->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script type="text/javascript" src="js/vendor/infobox_packed.js"></script>
+        <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.3"></script>
+        <!-- some google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Medula+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+        <div id="splash" class="clearfix">
+            <div id="splashmap"></div>
+            <div id="about">
+                <h1><nobr>ArcSuviam <span id="infotoggle">&#8743;</span></nobr></h1>
+                <p>Hello, I'm John. This is where I play around with maps, design, and web technologies. I manage a few nonprofit sites, chase after my two little ones, and squeeze in GIS studies at Northeastern University. Explore...</p>
+                <p><a href="#navbar" class="btn">See My Experiments</a></p>
+                <p><a href="#con-anchor" class="btn">Get In Touch</a></p>
+            </div>
+            <img id="txs" src="img/txs.png" />
+            <a href="http://maps.stamen.com/#watercolor/" target="_blank"><img id="stamen" src="img/stamen.png" /></a>
+        </div>
+
+        <div id="navbar" class="header-container">
+            <header class="wrapper clearfix">
+                <h2 class="title">ArcSuviam</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#splash">TOP</a></li>
+                        <li><a href="#exp-anchor">EXPERIMENTS</a></li>
+                        <li><a href="#con-anchor">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container" id="exp-anchor">
+            <div class="main wrapper clearfix">
+
+                <div class="divider" id="experiments">
+                    <h2>experiments</h2>
+                    <img class="compass" src="img/compass2.png" />
+                </div>
+
+                <article>
+                    <header>
+                        <h1><a href="/play/portfolio/" target="_blank">Masonry Portfolio</a></h1>
+                        <img src="img/portfolio-splash.png" />
+                    </header>
+                    <section>
+                        <p>A collection of my professional products displayed in a Pinterest-like web layout based on the Masonry JavaScript library.</p>
+                        <p><a href="/play/portfolio/" target="_blank">Open in a new tab »</a></p>
+                    </section>
+                </article>
+
+                <article>
+                    <header>
+                    	<h1><a href="/play/simple-raphael-map/" target="_blank">Responsive Raphaël map</a></h1>
+                        <img src="img/raphael-splash.png" />
+                    </header>
+                    <section>
+                        <p>My stab at making a responsively designed map using the <a href="http://raphaeljs.com/" target="_blank">Raphaël javascript library</a>. Toggle selections. Slide in information panels.</p>
+                        <p><a href="/play/simple-raphael-map/" target="_blank">Open in a new tab »</a></p>
+                    </section>
+                </article>
+
+                <article>
+                    <header>
+                        <h1><a href="/play/d3-sortable-bar-chart/" target="_blank">D3 Sortable Bar Chart</a></h1>
+                        <img src="img/d3-bar-splash.png" />
+                    </header>
+                    <section>
+                        <p>Using D3.js to build a bar chart that resorts based on user selections. This one uses data on India's states and union territories from <a href="http://www.indiaspend.com/" target="_blank">IndiaSpend</a>.</p>
+                        <p><a href="/play/d3-sortable-bar-chart/" target="_blank">Open in a new tab »</a></p>
+                    </section>
+                </article>
+
+                <article>
+                    <header>
+                    	<h1><a href="/play/mapbox/" target="_blank">Mapbox Basemaps</a></h1>
+                        <img src="img/mapbox-splash.png" />
+                    </header>
+                    <section>
+                        <p>Mapbox's editor lets you easily design and deploy custom basemaps. I made three: 1) Faded Accent, 2) Purple Haze, 3) Lightweight.</p>
+                        <p><a href="/play/mapbox/" target="_blank">Open in a new tab »</a></p>
+                    </section>
+                </article>
+                                
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="contact-container" id="con-anchor">
+            <div class="main wrapper clearfix">
+
+                <div class="divider" id="contact">
+                    <h2>contact</h2>
+                    <img class="compass" src="img/compass2.png" />
+                </div>
+                
+                <p>Question? Comment? Job offer? Send me an email...</p>
+
+                  <form class="clearfix" method= "post" action="http://www.ipage.com/scripts/formemail.bml">
+                    <input type="hidden" name="my_email" value="jlmyers42@yahoo.com">
+                    <input type="hidden" name="required" value="name,email,subject,message"> 
+                    <input type="hidden" name="thankyou_url" value="http://www.arcsuviam.com/thanks.html">
+                    <label class="visuallyhidden">Name (required)</label>
+                    <input type="text" name="name" class="form-input" placeholder="Name (required)" required />
+                    <label class="visuallyhidden">Email (required)</label>
+                    <input type="email" name="email" class="form-input" placeholder="Email (required)" required />
+                    <label class="visuallyhidden">Subject (required)</label>
+                    <input type="text" name="subject" class="form-input" placeholder="Subject (required)" required />
+                    <label class="visuallyhidden">Message (required)</label>
+                    <textarea name="message" class="form-input"  placeholder="Message (required)" required></textarea>
+                    <input class="btn" type="submit" name="submit" value="Send" />
+                    <input class="btn" type="reset" name="reset" value="Reset" >
+                  </form>
+
+                <div class="socbtns">
+                    <a href="https://twitter.com/jlmyers42" target="_blank"><img src="img/twitter-128.png" /></a>
+                    <a href="https://plus.google.com/102244465024097368683" target="_blank"><img src="img/googleplus-128.png" /></a>
+                    <a href="http://www.linkedin.com/pub/john-myers/11/633/74b/" target="_blank"><img src="img/linkedin-128.png" /></a>
+                    <!--<a href="#" target="_blank"><img src="img/dribbble-128.png" /></a>
+                    <a href="#" target="_blank"><img src="img/codepen-128.png" /></a>
+                    <a href="#" target="_blank"><img src="img/github-128.png" /></a>-->
+                </div>
+
+
+            </div> <!-- #main -->
+        </div> <!-- #contact-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <p>&copy;MMXIV - JL Myers <span><a href="#splash">Top</a></span></p>
+            </footer>
+        </div>
+
+        <script src="js/main.js"></script>
+
+		<script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-45587623-1', 'arcsuviam.com');
+          ga('send', 'pageview');
+        
+        </script>
+
+    </body>
+</html>
